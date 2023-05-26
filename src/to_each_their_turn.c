@@ -20,12 +20,12 @@ void to_each_their_turn(char *str)
         return;
     }
     if (fork_res == 0) {
-        write(1,"\nGosse", 6);
+        write(1,"\nGosse : ", 9);
         write(1, str, stu_strlen(str));
-        write (1, "\n", 1);
+        //write (1, "\n", 1);
     } else {
         waitpid (fork_res, &statut, 0);
-        write(1,"\nParent", 7);
+        write(1,"\nParent : ", 10);
         write(1, str, stu_strlen(str));
         write (1, "\n", 1);
     }
