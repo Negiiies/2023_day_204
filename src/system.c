@@ -24,5 +24,5 @@ int stu_system(char *str)
             waitpid (fork_res, &statut, 0);
         }
     }
-        return (WIFEXITED(statut));
+        return (WEXITSTATUS(statut));
 }
